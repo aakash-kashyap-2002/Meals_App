@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:meals_app/models/meal.dart';
-import 'package:riverpod/riverpod.dart';
 import 'package:meals_app/providers/favorites_provider.dart';
 
 class MealDetailsScreen extends ConsumerWidget {
@@ -31,11 +30,11 @@ class MealDetailsScreen extends ConsumerWidget {
                 SnackBar(
                   content: Text(wasAdded
                       ? 'Added to favorites'
-                      : 'Removed from favorites'),
+                      : 'Removed from the favorites'),
                 ),
               );
             },
-            icon: Icon(isFavorite? Icons.star_outlined : Icons.star_border),
+            icon: Icon(isFavorite ? Icons.star_outlined : Icons.star_border),
           ),
         ],
       ),
